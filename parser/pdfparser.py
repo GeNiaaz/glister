@@ -2,7 +2,6 @@ import PyPDF2
 import time
 import nltk
 
-file_name = "parser/test.pdf"
 
 class PdfParser:
     def __init__(self, pdf_path: str):
