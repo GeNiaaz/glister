@@ -5,7 +5,7 @@ import nltk
 
 class PdfParser:
     def __init__(self, pdf_path: str):
-        self.pdfReader = PyPDF2.PdfFileReader(open(file_name, 'rb'))
+        self.pdfReader = PyPDF2.PdfFileReader(open(pdf_path, 'rb'))
 
 
     def get_page_count(self):
