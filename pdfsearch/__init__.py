@@ -3,7 +3,13 @@
 import sys
 import getopt
 import os
+import logging
 
+def main(input_file):
+    ...
+
+
+logger = logging.getLogger(__name__)
 
 input_file = None
 
@@ -22,10 +28,8 @@ for o, a in opts:
     else:
         assert False, "unhandled option"
 
-def usage():
-    print(": " + sys.argv[0] + " -i directory-of-documents -d dictionary-file -p postings-file")
-
 if input_file == None:
     usage()
     sys.exit(2)
 
+main(input_file)
