@@ -4,12 +4,20 @@ from etc.constants import PUNCTUATION
 import nltk
 from nltk.stem import PorterStemmer
 
+''' 
+Tokenise class is meant to be a singleton class that takes in settings from user once.
+Tokenise has hardcoded traits like PorterStemmer, which may be changed in future
+TODO: add singleton functionality
+TODO: add variable stemmer functionality
 
+'''
 class Tokenise: 
-    def __init__(self, is_punct: bool, ):
+    def __init__(self, is_punct: bool, is_case_fold: bool, is_stem: bool):
         self.stemmer = PorterStemmer;
         self.doc_dictionary_of_terms = {}
         self.is_punctuation = is_punct
+        self.is_case_fold = is_case_fold
+        self.is_stem = is_stem
 
     ''' Primary called function '''
     def tokenise_doc(self, doc):
