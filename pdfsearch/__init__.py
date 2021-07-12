@@ -4,9 +4,7 @@ import sys
 import getopt
 import os
 import logging
-
-def main(input_file):
-    ...
+import mainapp
 
 
 logger = logging.getLogger(__name__)
@@ -32,4 +30,7 @@ if input_file == None:
     usage()
     sys.exit(2)
 
-main(input_file)
+
+''' App starts here'''
+
+mainapp.start(input_file)
