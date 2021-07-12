@@ -11,7 +11,7 @@ TODO: add singleton functionality
 TODO: add variable stemmer functionality
 
 '''
-class Tokenise: 
+class Tokeniser: 
     def __init__(self, is_punct: bool, is_case_fold: bool, is_stem: bool):
         self.stemmer = PorterStemmer;
         self.doc_dictionary_of_terms = {}
@@ -27,6 +27,11 @@ class Tokenise:
         return self.dictionary_of_terms
 
     ''' Secondary called functions '''
+
+    # TODO: check that this works
+    def get_num_terms_in_page(doc):
+        return len(doc)
+
     def process_sentences(self, sentences):
         for sentence in sentences:
             terms = self.process_each_sentence(sentence)

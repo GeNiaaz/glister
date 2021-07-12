@@ -11,6 +11,7 @@ class PdfParser:
     def get_page_count(self):
         return self.pdfReader.numPages
 
-    def get_page(self, page_number: int):
+    def get_doc(self, page_number: int):
         pageObj = self.pdfReader.getPage(page_number)
-        return pageObj.extractText()
+        doc = pageObj.extractText()
+        return doc
